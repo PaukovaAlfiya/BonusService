@@ -41,7 +41,7 @@ public class BonusServiceTest {
         // подготавливаем данные:
         long amount = 1000; // сумма покупки
         boolean registered = false; // статус пользователя
-        long expected = 30; // ожидаемый результат
+        long expected = 10; // ожидаемый результат
 
         // вызываем целевой метод:
         long actual = service.calculate(amount, registered);
@@ -51,7 +51,7 @@ public class BonusServiceTest {
     }
 
     @org.junit.jupiter.api.Test
-    void ItshouldBecalculatedForunregisteredAndExceedingLimit() { // следует Рассчитать Для Зарегистрированных И Превышающих Лимит
+    void ItshouldBecalculatedForunregisteredAndExceedingLimit() { // следует Рассчитать Для неЗарегистрированных И Превышающих Лимит
         BonusService service = new BonusService();
 
         // подготавливаем данные:
